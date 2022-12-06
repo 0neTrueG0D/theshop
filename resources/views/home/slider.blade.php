@@ -16,7 +16,7 @@
                             <br>
                             On Everything
                          </h1>
-                         <p>
+                         <p class="text-white">
                             Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                          </p>
                          <div class="btn-box">
@@ -41,7 +41,7 @@
                             <br>
                             On Everything
                          </h1>
-                         <p>
+                         <p  class="text-white">
                             Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                          </p>
                          <div class="btn-box">
@@ -66,7 +66,7 @@
                             <br>
                             On Everything
                          </h1>
-                         <p>
+                         <p class="text-white">
                             Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                          </p>
                          <div class="btn-box">
