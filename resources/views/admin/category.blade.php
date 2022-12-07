@@ -24,14 +24,41 @@
   </head>
   <body>
     <div class="container-scroller">
-      <!-- partial:partials/_sidebar.html -->
-      @include('admin.sidebar')
-      <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        @include('admin.sidebar')
+        <!-- partial -->
 
-      @include('admin.header')
-      <!-- partial -->
-      @include('admin.body')
-      
+        @include('admin.header')
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+
+                @if(session()->has('message'))
+
+                    <div class="alert alert-success">
+
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        {{session()->get('message')}}
+
+                    </div>
+
+                @endif
+
+                <div class="text-center mt-10">
+                    <h2 class="pb-10 text-xl"> Add Category</h2>
+
+                    <form action="{{url('/add_category')}}" method="POST" class="mt-10">
+                        @csrf
+                        <input class="text-black" type="text" name="category" placeholder="write category name">
+
+                        <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
