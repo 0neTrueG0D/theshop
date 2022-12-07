@@ -21,6 +21,18 @@
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+
+    <style>
+
+        .center {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            margin-top: 30px;
+            border: 3px solid white;
+        }
+
+    </style>
   </head>
   <body>
     <div class="container-scroller">
@@ -44,18 +56,42 @@
 
                 @endif
 
-                <div class="text-center mt-10">
+                <div class="text-center mt-4">
                     <h2 class="pb-10 text-xl"> Add Category</h2>
 
-                    <form action="{{url('/add_category')}}" method="POST" class="mt-10">
+                    <form action="{{url('/add_category')}}" method="POST" class="mt-4">
                         @csrf
                         <input class="text-black" type="text" name="category" placeholder="write category name">
 
                         <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
 
                     </form>
-
                 </div>
+
+                <table class="center">
+
+                    <tr>
+                        <td>Category name</td>
+                        <td>Action</td>
+                    </tr>
+
+                    @foreach ($data as $data)
+
+                        <tr>
+                            <td>
+                                <span class="mt-1 mb-1">
+                                    {{ $data->category_name }}
+                                </span>
+                            </td>
+                            <td>
+                                <a onclick="return confirm('Are you sure?')" href="{{ url('delete_category', $data->id) }}" class="btn btn-danger mt-1 mb-1"> Delete </a>
+                            </td>
+                        </tr>
+
+                    @endforeach
+                   
+                </table>
+
             </div>
         </div>
         
