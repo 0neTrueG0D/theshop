@@ -40,42 +40,62 @@
         <div class="main-panel">
             <div class="content-wrapper">
 
+                @if(session()->has('message'))
+
+                    <div class="alert alert-success">
+
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        {{session()->get('message')}}
+
+                    </div>
+
+                @endif
+
                 <div class="text-center mt-4">
                     <h1 class="mb-4 text-xl"> Add Product</h1>
 
-                    <div class="mt-1 mb-1">
-                        <label> Title </label>
-                        <input class="text-black rounded-lg" type="text" name="title" placeholder="write a title">
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <label> Description </label>
-                        <input class="text-black rounded-lg" type="text" name="description" placeholder="write a description">
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <label> Price </label>
-                        <input class="text-black rounded-lg" type="number" name="price" placeholder="price of product">
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <label> Discounted Price </label>
-                        <input class="text-black rounded-lg" type="number" name="discount" placeholder="discount">
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <label> Quantity </label>
-                        <input class="text-black rounded-lg" type="number" name="quantity" min="0" placeholder="enter quantity">
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <label> Category </label>
-                        <select name="category" id="">
-                            <option value=""> hijab </option>
-                        </select>
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <label> Image </label>
-                        <input type="file" name="image">
-                    </div>
-                    <div class="mt-1 mb-1">
-                        <input class="btn btn-primary text-xl" type="submit" name="submit" value="Add Product">
-                    </div>
+                    <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
+
+                        @csrf
+                        <div class="mt-1 mb-1">
+                            <label> Title </label>
+                            <input class="text-black rounded-lg" type="text" name="title" required="" placeholder="write a title">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <label> Description </label>
+                            <input class="text-black rounded-lg" type="text" name="description" required="" placeholder="write a description">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <label> Price </label>
+                            <input class="text-black rounded-lg" type="number" name="price" required="" placeholder="price of product">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <label> Discounted Price </label>
+                            <input class="text-black rounded-lg" type="number" name="discount" placeholder="discount">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <label> Quantity </label>
+                            <input class="text-black rounded-lg" type="number" name="quantity" min="0" required="" placeholder="enter quantity">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <label> Category </label>
+                            <select name="category" id="">
+                                <option value="" selected=""> Select a category </option>
+
+                                @foreach ($category as $category)
+                                  <option value="{{ $category->category_name }}"> {{ $category->category_name }}</option>  
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <label> Image </label>
+                            <input type="file" name="image">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <input class="btn btn-primary text-xl" type="submit" name="submit" value="Add Product">
+                        </div>
+
+                    </form>
                 </div>
 
             </div>
