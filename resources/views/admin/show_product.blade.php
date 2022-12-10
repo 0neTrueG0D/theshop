@@ -41,65 +41,57 @@
   </head>
   <body>
     <div class="container-scroller">
-        <!-- partial:partials/_sidebar.html -->
-        @include('admin.sidebar')
-        <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      @include('admin.sidebar')
+      <!-- partial -->
 
-        @include('admin.header')
-        <!-- partial -->
-        <div class="main-panel">
-            <div class="content-wrapper">
+      @include('admin.header')
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
 
-                @if(session()->has('message'))
+            @if(session()->has('message'))
 
-                    <div class="alert alert-success">
+                <div class="alert alert-success">
 
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
-                        {{session()->get('message')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                    {{session()->get('message')}}
 
-                    </div>
-
-                @endif
-
-                <div class="text-center mt-4">
-                    <h2 class="pb-10 text-xl"> Add Category</h2>
-
-                    <form action="{{url('/add_category')}}" method="POST" class="mt-4">
-                        @csrf
-                        <input class="text-black" type="text" name="category" placeholder="write category name">
-
-                        <input class="btn btn-primary" type="submit" name="submit" value="Add Category">
-
-                    </form>
                 </div>
 
-                <table class="center">
+            @endif
 
-                    <tr>
-                        <th>Category name</th>
-                        <th>Action</th>
-                    </tr>
+            <h2 class="pb-10 text-xl text-center">All Products</h2>
+            <table class="center">
 
-                    @foreach ($data as $data)
-
-                        <tr>
-                            <td>
-                                <span class="mt-1 mb-1">
-                                    {{ $data->category_name }}
-                                </span>
-                            </td>
-                            <td>
-                                <a onclick="return confirm('Are you sure?')" href="{{ url('delete_category', $data->id) }}" class="btn btn-danger mt-1 mb-1"> Delete </a>
-                            </td>
-                        </tr>
-
-                    @endforeach
-                   
-                </table>
-
-            </div>
+                <tr>
+                    <th>Product title</th>
+                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th>Image</th>
+                </tr>
+                @foreach ($product as $product)
+                
+                <tr>
+                    <td>{{ $product->title }}</td>
+                    <td>{{ $product->description }}</td>
+                    <td>{{ $product->quantity }}</td>
+                    <td>{{ $product->category }}</td>
+                    <td>{{ $product->price }}</td>
+                    <td>{{ $product->discount_price }}</td>
+                    <td>
+                        <img src="/product/{{$product->image}}" alt="product image">
+                    </td>
+                </tr>
+                    
+                @endforeach
+            </table>
         </div>
-        
+      </div>
+      
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
