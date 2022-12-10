@@ -37,6 +37,10 @@
         td {
             padding: 10px;
         }
+        .image-decoration {
+            width: 100px;
+            height: auto;
+        }
     </style>
   </head>
   <body>
@@ -83,7 +87,7 @@
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->discount_price }}</td>
                     <td>
-                        <img src="/product/{{$product->image}}" alt="product image">
+                        <img class="image-decoration" src="/product/{{$product->image}}" alt="product image">
                     </td>
                 </tr>
                     
