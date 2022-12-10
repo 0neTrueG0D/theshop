@@ -51,7 +51,7 @@
 
                 @endif
 
-                <div class="text-center mt-4">
+                <div class="text-center">
                     <h1 class="mb-4 text-xl"> Add Product</h1>
 
                     <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">

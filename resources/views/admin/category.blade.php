@@ -61,8 +61,8 @@
 
                 @endif
 
-                <div class="text-center mt-4">
-                    <h2 class="pb-10 text-xl"> Add Category</h2>
+                <div class="text-center">
+                    <h1 class="text-xl"> Add Category</h1>
 
                     <form action="{{url('/add_category')}}" method="POST" class="mt-4">
                         @csrf

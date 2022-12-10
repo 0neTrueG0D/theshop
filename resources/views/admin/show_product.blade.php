@@ -65,7 +65,7 @@
 
             @endif
 
-            <h2 class="pb-10 text-xl text-center">All Products</h2>
+            <h1 class="text-xl text-center">All Products</h1>
             <table class="center">
 
                 <tr>
