@@ -38,8 +38,8 @@
             padding: 10px;
         }
         .image-decoration {
-            width: 100px;
-            height: auto;
+            width: auto;
+            height: 80px;
         }
     </style>
   </head>
@@ -76,6 +76,7 @@
                     <th>Price</th>
                     <th>Discount</th>
                     <th>Image</th>
+                    <th>Action</th>
                 </tr>
                 @foreach ($product as $product)
                 
@@ -87,7 +88,13 @@
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->discount_price }}</td>
                     <td>
-                        <img class="image-decoration" src="/product/{{$product->image}}" alt="product image">
+                        <img class="image-decoration rounded-full" src="/product/{{$product->image}}" alt="product image">
+                    </td>
+                    <td> 
+                        <div class="flex flex-row">
+                            <a onclick="return confirm('Are you sure?')" href="{{ url('delete_product', $product->id) }}" class="btn btn-danger ml-1 mr-1"> Delete </a>
+                            <a href="{{ url('update_product', $product->id) }}" class="btn btn-success ml-1 mr-1"> Update </a>
+                        </div>
                     </td>
                 </tr>
                     

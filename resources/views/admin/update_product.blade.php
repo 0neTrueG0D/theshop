@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <base href="/public">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,10 +24,19 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
 
+    
+
     <style>
         label{
             display: inline-block;
             width: 200px;
+        }
+        .image-view {
+            margin: auto;
+            height: 150px;
+            width: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         option {
             color: black;
@@ -57,33 +68,34 @@
                 <div class="text-center">
                     <h1 class="mb-4 text-xl"> Add Product</h1>
 
-                    <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('/update_product_confirm', $product->id ) }}" method="POST" enctype="multipart/form-data">
 
                         @csrf
                         <div class="mt-1 mb-1">
                             <label> Title </label>
-                            <input class="text-black rounded-lg" type="text" name="title" required="" placeholder="write a title">
+                            <input class="text-black rounded-lg" type="text" name="title" required="" placeholder="write a title" value="{{$product->title}}">
                         </div>
                         <div class="mt-1 mb-1">
                             <label> Description </label>
-                            <input class="text-black rounded-lg" type="text" name="description" required="" placeholder="write a description">
+                            <input class="text-black rounded-lg" type="text" name="description" required="" placeholder="write a description" value="{{$product->description}}">
                         </div>
                         <div class="mt-1 mb-1">
                             <label> Price </label>
-                            <input class="text-black rounded-lg" type="number" name="price" required="" placeholder="price of product">
+                            <input class="text-black rounded-lg" type="number" name="price" required="" placeholder="price of product" value="{{$product->price}}">
                         </div>
                         <div class="mt-1 mb-1">
                             <label> Discounted Price </label>
-                            <input class="text-black rounded-lg" type="number" name="discount" placeholder="discount">
+                            <input class="text-black rounded-lg" type="number" name="discount" placeholder="discount" value="{{$product->discount_price}}">
                         </div>
                         <div class="mt-1 mb-1">
                             <label> Quantity </label>
-                            <input class="text-black rounded-lg" type="number" name="quantity" min="0" required="" placeholder="enter quantity">
+                            <input class="text-black rounded-lg" type="number" name="quantity" min="0" required="" placeholder="enter quantity" value="{{$product->quantity}}">
                         </div>
                         <div class="mt-1 mb-1">
                             <label> Category </label>
                             <select name="category" id="">
-                                <option value="" selected=""> Select a category </option>
+                                
+                                <option value="{{ $product->category }}" selected=""> {{ $product->category }}</option> 
 
                                 @foreach ($category as $category)
                                   <option value="{{ $category->category_name }}"> {{ $category->category_name }}</option>  
@@ -91,11 +103,15 @@
                             </select>
                         </div>
                         <div class="mt-1 mb-1">
-                            <label> Image </label>
-                            <input type="file" name="image" required>
+                            <label> Current image </label>
+                            <img src="/product/{{ $product->image }}" alt="product image" class="rounded-lg image-view">
                         </div>
                         <div class="mt-1 mb-1">
-                            <input class="btn btn-primary text-xl" type="submit" name="submit" value="Add Product">
+                            <label> Update image </label>
+                            <input type="file" name="image">
+                        </div>
+                        <div class="mt-1 mb-1">
+                            <input class="btn btn-primary text-xl" type="submit" name="submit" value="Update Product">
                         </div>
 
                     </form>
