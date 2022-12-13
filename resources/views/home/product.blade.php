@@ -16,12 +16,12 @@
                       View Details
                       </a>
                       <a href="" class="option2">
-                      Buy Now
+                      Add to Cart
                       </a>
                    </div>
                 </div>
                 <div class="img-box">
-                   <img src="/product/{{ $item->image }}" alt="">
+                   <img src="/product/{{ $item->image }}" alt="" class="rounded-lg">
                 </div>
                 <div class="detail-box">
                      <h5>

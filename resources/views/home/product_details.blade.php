@@ -21,10 +21,76 @@
       <link href="home/css/style.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
+
+      <style>
+
+         @media ( max-width: 768px ) {
+            #product-detail {
+             
+            }
+         }
+         @media ( min-width: 768px ) {
+            #product-detail {
+               
+            }
+         }
+         .detail-container {
+            margin: auto;
+            padding: 30px;
+         }
+
+      </style>
    </head>
    <body>
       <div class="hero_area">
          @include('home.header')
+
+         <div class="col-sm-6 col-md-4 col-lg-4 detail-container">
+            <div class="box" id="product-detail">
+               <div class="img-box">
+                  <img src="/product/{{ $product->image }}" alt="" class="rounded-lg">
+               </div>
+               <div class="detail-box">
+                    <h5 class="mt-10">
+                     {{ $product->title }}
+                    </h5>
+
+                    <h6 class="mt-2">
+                     {{ $product->description }}
+                    </h6>
+
+                    @if ($product->discount_price != null)
+                       
+                       <h6 style="color: red" class="mt-2">
+                          Discounted Price: $ {{ $product->discount_price}}
+                       </h6>
+                       <h6 style="color: blue;" class="mt-2">
+                         Original Price: $ <span style="text-decoration: line-through;"> {{ $product->price}} </span>
+                       </h6>
+
+                    @else 
+
+                       <h6 style="color: red" class="mt-2">
+                          $ {{ $product->price}}
+                       </h6>
+                       
+                    @endif
+
+                    @if ( $product->quantity < 5)
+                        <h6 class="mt-2">
+                           Hurry up! Only {{ $product->quantity }} quantity left
+                        </h6>
+                    @else
+                        <h6 class="mt-2">
+                           Available in Stock
+                        </h6>
+                    @endif
+
+                    <a href="" class="btn btn-primary btn-large btn-block mt-4"> Add to Cart</a>
+               </div>
+            </div>
+         </div>
+
       </div>
      
 
