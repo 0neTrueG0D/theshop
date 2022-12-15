@@ -86,7 +86,7 @@
                         </h6>
                     @endif
 
-                    <a href="" class="btn btn-primary btn-large btn-block mt-4"> Add to Cart</a>
+                    <a href="{{ url('checkout', $product->id) }}" class="btn btn-primary btn-large btn-block mt-4"> Add to Cart</a>
                </div>
             </div>
          </div>

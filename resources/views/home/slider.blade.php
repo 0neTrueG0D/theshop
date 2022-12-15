@@ -14,7 +14,9 @@
                             Sale 20% Off
                             </span>
                             <br>
-                            On Everything
+                            <span class="text-white">
+                               On Shawl Scarf
+                            </span>
                          </h1>
                          <p class="text-white">
                             Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
@@ -36,10 +38,12 @@
                       <div class="detail-box">
                          <h1>
                             <span>
-                            Sale 20% Off
+                            Sale 30% Off
                             </span>
                             <br>
-                            On Everything
+                            <span class="text-white">
+                               On Hijab
+                            </span>
                          </h1>
                          <p  class="text-white">
                             Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
@@ -61,10 +65,12 @@
                       <div class="detail-box">
                          <h1>
                             <span>
-                            Sale 20% Off
+                            Get 10% Cashback
                             </span>
                             <br>
-                            On Everything
+                            <span class="text-white">
+                               On Everything
+                            </span>
                          </h1>
                          <p class="text-white">
                             Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.

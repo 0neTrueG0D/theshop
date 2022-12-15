@@ -30,6 +30,7 @@ Route::middleware([
 
 Route::get('/redirect', [HomeController::class, 'redirect']);
 Route::get('/product_details/{id}', [HomeController::class, 'product_details']);
+Route::get('/checkout/{id}', [HomeController::class, 'checkout']);
 
 Route::get('/view_category', [AdminController::class, 'view_category']);
 

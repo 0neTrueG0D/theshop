@@ -12,7 +12,7 @@
                    <div class="img_container">
                       <div class="img-box">
                          <div class="img_box-inner">
-                            <img src="images/client.jpg" alt="">
+                            <img src="images/test1.jpg" alt="">
                          </div>
                       </div>
                    </div>
@@ -24,7 +24,7 @@
                          Customer
                       </h6>
                       <p>
-                         Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                        This is pretty great. I love the length and the fit and mostly I love how cozy it is. It keeps me warm, looks great and is soft and luxurious. I am thinking about getting another in a different color…because if it’s this good, why not?
                       </p>
                    </div>
                 </div>
@@ -34,19 +34,19 @@
                    <div class="img_container">
                       <div class="img-box">
                          <div class="img_box-inner">
-                            <img src="images/client.jpg" alt="">
+                            <img src="images/test2.jpg" alt="">
                          </div>
                       </div>
                    </div>
                    <div class="detail-box">
                       <h5>
-                         Anna Trevor
+                         Wasabi
                       </h5>
                       <h6>
                          Customer
                       </h6>
                       <p>
-                         Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                        This is a bulky, fairly heavy winter  that will be awesome for the office or casual wear. The fabric is very silky soft. It’s nice and snuggly! I can’t wait for it to get cool enough to wear it!
                       </p>
                    </div>
                 </div>
@@ -56,19 +56,19 @@
                    <div class="img_container">
                       <div class="img-box">
                          <div class="img_box-inner">
-                            <img src="images/client.jpg" alt="">
+                            <img src="images/test3.jpg" alt="">
                          </div>
                       </div>
                    </div>
                    <div class="detail-box">
                       <h5>
-                         Anna Trevor
+                         Laura Hassan
                       </h5>
                       <h6>
                          Customer
                       </h6>
                       <p>
-                         Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
+                        I love this sweater! It is so pretty and stylish with shorts and jeans. I have not washed it yet so I am not sure how it is going to hold up but for now, I am super happy!
                       </p>
                    </div>
                 </div>
